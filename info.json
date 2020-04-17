@@ -1,0 +1,14 @@
+{
+  "name": "InfiniteFuel",
+  "version": "1.1.2",
+  "factorio_version": "0.18",
+  "title": "Infinite Fuel",
+  "author": "WipMod",
+  "contact": "https://t.me/wipmod",
+  "homepage": "mods.factorio.com/mods/WipMod/InfiniteFuel",
+  "description": "Infinite fuel just for funs",
+  "dependencies": [
+    "? MicroFurnaceWipMod >= 1.0.1",
+    "? Random_Utilities >= 1.1.0"
+  ]
+}
