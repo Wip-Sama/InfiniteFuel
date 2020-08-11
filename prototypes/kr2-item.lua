@@ -1,11 +1,10 @@
-data:extend(
-{
+data:extend({
   {
     type = "item",
-    name = "Infinite-Fuel",
-    icon = "__InfiniteFuel__/graphics/infinite-fuel.png",
+    name = "kr2-Infinite-Fuel",
+    icon = "__InfiniteFuel__/graphics/kr2-infinite-fuel.png",
     icon_size = 128,
-    fuel_category = "chemical",
+    fuel_category = "vehicle-fuel",
     fuel_value = "InfMJ",
     fuel_acceleration_multiplier = 3.5,
     fuel_top_speed_multiplier = 4,
@@ -15,10 +14,10 @@ data:extend(
   },
   {
     type = "item",
-    name = "Boosted-Infinite-Fuel",
-    icon = "__InfiniteFuel__/graphics/infinite-fuel.png",
+    name = "kr2-Boosted-Infinite-Fuel",
+    icon = "__InfiniteFuel__/graphics/kr2-Boosted-infinite-fuel.png",
     icon_size = 128,
-    fuel_category = "chemical",
+    fuel_category = "vehicle-fuel",
     fuel_value = "InfMJ",
     fuel_acceleration_multiplier = 6,
     fuel_top_speed_multiplier = 8,
@@ -28,10 +27,10 @@ data:extend(
   },
   {
     type = "item",
-    name = "Ultra-Boosted-Infinite-Fuel",
-    icon = "__InfiniteFuel__/graphics/infinite-fuel.png",
+    name = "kr2-Ultra-Boosted-Infinite-Fuel",
+    icon = "__InfiniteFuel__/graphics/kr2-Ultra-Boosted-infinite-fuel.png",
     icon_size = 128,
-    fuel_category = "chemical",
+    fuel_category = "vehicle-fuel",
     fuel_value = "InfMJ",
     fuel_acceleration_multiplier = 12,
     fuel_top_speed_multiplier = 16,

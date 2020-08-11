@@ -2,15 +2,16 @@ data:extend(
 {
     {
     type = "technology",
-    name = "Infinite-Power",
-    icon = "__InfiniteFuel__/graphics/infinite-fuel.png",
+    name = "kr2-Infinite-Power",
+    hidden = "true",
+    icon = "__InfiniteFuel__/graphics/kr2-infinite-fuel.png",
     icon_size = 128,
     prerequisites = {"oil-processing"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "Infinite-Fuel"}
-      {type = "unlock-recipe",recipe = "Boosted-Infinite-Fuel"}
-      {type = "unlock-recipe",recipe = "Ultimate-Boosted-Infinite-Fuel"}
+      {type = "unlock-recipe",recipe = "kr2-Infinite-Fuel"}
+      {type = "unlock-recipe",recipe = "kr2-Boosted-Infinite-Fuel"}
+      {type = "unlock-recipe",recipe = "kr2-Ultimate-Boosted-Infinite-Fuel"}
     },
     unit =
     {

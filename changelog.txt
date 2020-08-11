@@ -1,9 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.3
+Date: xx/xx/2020
+  Added:
+    - Boosted infinite fuel
+    - Ultra Boosted infinite fuel
+    - krastorio 2 vehicle compatibility
+---------------------------------------------------------------------------------------------------
 Version: 1.1.2
 Date: 23/03/2020
   Changes:
-    Modified:
-        --info.json
-        Added:
-
-//TODO:
+    - depencies

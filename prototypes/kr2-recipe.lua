@@ -2,10 +2,11 @@ data:extend(
 {
     {
         type = "recipe",
-        name = "Infinite-Fuel",
+        name = "kr2-Infinite-Fuel",
+        hidden = "true",
         energy_required = 500,
         enabled = false,
-        icon = "__InfiniteFuel__/graphics/infinite-fuel.png",
+        icon = "__InfiniteFuel__/graphics/kr2-infinite-fuel.png",
         icon_size = 128,
         subgroup = "intermediate-product",
         order = "q[InfiniteFuel]-a",
@@ -14,37 +15,39 @@ data:extend(
         {
           {"nuclear-fuel", 10}
         },
-        result = "Infinite-Fuel"
+        result = "kr2-Infinite-Fuel"
     },
     {
         type = "recipe",
-        name = "Boosted-Infinite-Fuel",
+        name = "kr2-Boosted-Infinite-Fuel",
+        hidden = "true",
         energy_required = 1000,
         enabled = false,
-        icon = "__InfiniteFuel__/graphics/infinite-fuel.png",
+        icon = "__InfiniteFuel__/graphics/kr2-Boosted-infinite-fuel.png",
         icon_size = 128,
         subgroup = "intermediate-product",
         order = "q[InfiniteFuel]-b",
 
         ingredients =
         {
-          {"Infinite-Fuel", 2}
+          {"kr2-Infinite-Fuel", 2}
         },
-        result = "Boosted-Infinite-Fuel"
+        result = "kr2-Boosted-Infinite-Fuel"
     },
     {
         type = "recipe",
-        name = "Ultra-Boosted-Infinite-Fuel",
+        name = "kr2-Ultra-Boosted-Infinite-Fuel",
+        hidden = "true",
         energy_required = 1500,
         enabled = false,
-        icon = "__InfiniteFuel__/graphics/infinite-fuel.png",
+        icon = "__InfiniteFuel__/graphics/kr2-Ultra-Boosted-infinite-fuel.png",
         icon_size = 128,
         subgroup = "intermediate-product",
-        order = "q[InfiniteFuel]-c",
+        order = "q[kr2-InfiniteFuel]-c",
 
         ingredients =
         {
-          {"Boosted-Infinite-Fuel", 2}
+          {"kr2-Boosted-Infinite-Fuel", 2}
         },
         result = "Ultra-Boosted-Infinite-Fuel"
     },
