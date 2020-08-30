@@ -8,9 +8,9 @@ data:extend(
     prerequisites = {"oil-processing"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "Infinite-Fuel"}
-      {type = "unlock-recipe",recipe = "Boosted-Infinite-Fuel"}
-      {type = "unlock-recipe",recipe = "Ultimate-Boosted-Infinite-Fuel"}
+      {type = "unlock-recipe",recipe = "Infinite-Fuel"},
+      {type = "unlock-recipe",recipe = "Boosted-Infinite-Fuel"},
+      {type = "unlock-recipe",recipe = "Ultimate-Boosted-Infinite-Fuel"},
     },
     unit =
     {
