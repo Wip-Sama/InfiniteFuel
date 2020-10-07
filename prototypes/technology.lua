@@ -3,14 +3,15 @@ data:extend(
     {
     type = "technology",
     name = "Infinite-Power",
-    icon = "__InfiniteFuel__/graphics/infinite-fuel.png",
-    icon_size = 128,
+    hidden = "true",
+    icon = "__InfiniteFuel__/graphics/infinite-fuel-tech.png",
+    icon_size = 256,
     prerequisites = {"oil-processing"},
     effects =
     {
-      {type = "unlock-recipe",recipe = "Infinite-Fuel"},
-      {type = "unlock-recipe",recipe = "Boosted-Infinite-Fuel"},
-      {type = "unlock-recipe",recipe = "Ultimate-Boosted-Infinite-Fuel"},
+      --{type = "unlock-recipe",recipe = "Infinite-Fuel"},
+      --{type = "unlock-recipe",recipe = "Boosted-Infinite-Fuel"},
+      --{type = "unlock-recipe",recipe = "Ultra-Boosted-Infinite-Fuel"},
     },
     unit =
     {

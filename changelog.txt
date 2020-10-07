@@ -1,6 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 07/10/2020
+  Added:
+    - setting to disable fuel
+  Changes:
+    - Fuel graphics
+    - Text graphics
+    - Thumbamil
+---------------------------------------------------------------------------------------------------
 Version: 1.1.3
-Date: xx/xx/2020
+Date: 31/08/2020
   Added:
     - Boosted infinite fuel
     - Ultra Boosted infinite fuel
