@@ -1,22 +1,23 @@
-if mods["krastorio2"] then
-  data.raw["recipe"]["kr2-Infinite-Fuel"].hidden = false
-  data.raw["recipe"]["kr2-Boosted-Infinite-Fuel"].hidden = false
-  data.raw["recipe"]["kr2-Ultra-Boosted-Infinite-Fuel"].hidden = false
-  data.raw["recipe"]["kr2-Infinite-Power"].hidden = false
+if mods["Krastorio2"] and settings.startup["IF-kr-Infinite-Fuel"].value == true then
+  data.raw.item["kr-Infinite-Fuel"].fuel_category = "vehicle-fuel"
+  data.raw.recipe["kr-Infinite-Fuel"].hidden = false
+  table.insert(data.raw["technology"]["Infinite-Power"].effects, {type = "unlock-recipe",recipe = "kr-Infinite-Fuel"} )
+end
+if settings.startup["IF-kr-Infinite-Fuel"].value == false or not settings.startup["IF-kr-Infinite-Fuel"].value == true then
+  data.raw.item["kr-Infinite-Fuel"].fuel_category = "nothing"
+  data.raw.recipe["kr-Infinite-Fuel"].hidden = true
+  data.raw.recipe["kr-Infinite-Fuel"].enabled = false
 end
 
-local fuel_list = {
-  "Infinite-Fuel",
-  "Boosted-Infinite-Fuel",
-  "Ultra-Boosted-Infinite-Fuel",
-}
-
-if mods["krastorio2"] then
-  for _, fuel in pairs(fuel_list) do
-    if data.raw.item[fuel].fuel_category ~= "vehicle-fuel" then
-      table.insert(data.raw.item[fuel].fuel_category, "vehicle-fuel" )
-    end
-	end
+if settings.startup["IF-enable-on-nuclear-reactor"].value == true then
+  data.raw.item["Reactor-Infinite-Fuel"].fuel_category = "nuclear"
+  data.raw.recipe["Reactor-Infinite-Fuel"].hidden = false
+  table.insert(data.raw["technology"]["Infinite-Power"].effects, {type = "unlock-recipe",recipe = "Reactor-Infinite-Fuel"} )
+end
+if settings.startup["IF-enable-on-nuclear-reactor"].value == false then
+  data.raw.item["Reactor-Infinite-Fuel"].fuel_category = "nothing"
+  data.raw.recipe["Reactor-Infinite-Fuel"].hidden = true
+  data.raw.recipe["Reactor-Infinite-Fuel"].enabled = false
 end
 
 local IFFD = settings.startup["IF-fuel-disabler"].value

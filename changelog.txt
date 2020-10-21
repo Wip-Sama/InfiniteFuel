@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 16/10/2020
+  Added:
+    - Nuclear reactor compatibility
+    - another fuel for nuclear reactor (pretty useless)
+    - another fuel for Krastorio 2 (pretty useless)
+    - setting IF-enable-on-nuclear-reactor
+    - setting IF-kr-Infinite-Fuel (only with krastorio 2 installed)
+  Bugfixes:
+    - Krastorio 2 compatibility
+---------------------------------------------------------------------------------------------------
 Version: 2.0.0
 Date: 07/10/2020
   Added:
@@ -6,7 +17,7 @@ Date: 07/10/2020
   Changes:
     - Fuel graphics
     - Text graphics
-    - Thumbamil
+    - Thumbnail
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.3
 Date: 31/08/2020

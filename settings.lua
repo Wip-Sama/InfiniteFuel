@@ -12,4 +12,19 @@ data:extend({
             "tier 3"
         },
     },
+    {
+        type = "bool-setting",
+        name = "IF-enable-on-nuclear-reactor",
+        order = "ab",
+        setting_type = "startup",
+        default_value = "true",
+    },
+    {
+        type = "bool-setting",
+        name = "IF-kr-Infinite-Fuel",
+        hidden = "true",
+        order = "ac",
+        setting_type = "startup",
+        default_value = "true",
+    },
 })
