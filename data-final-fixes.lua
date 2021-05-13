@@ -5,14 +5,16 @@ local entity_list = {
   "mining-drill",
   "boiler",
   "furnace",
-  "reactor",
 }
---[
-if mods["Krastorio2"] then
+
+if settings.startup["IF-enable-on-nuclear-reactor"].value == true then
+  table.insert(entity_list, "reactor")
+end
+
+if mods["Krastorio2"].value == true and settings.startup["IF-kr-Infinite-Fuel"].value == true then
   table.insert(entity_list, "generator-equipment")
   table.insert(entity_list, "spider-vehicle")
 end
---]]
 
 for _, entity in pairs(entity_list) do
 

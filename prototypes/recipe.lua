@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   {
     type = "recipe",
     name = "Infinite-Fuel",
@@ -80,5 +79,4 @@ data:extend(
     },
     result = "kr-Infinite-Fuel"
   },
-}
-)
+})

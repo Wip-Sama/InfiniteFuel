@@ -1,5 +1,4 @@
-data:extend(
-{
+data:extend({
   {
     type = "item",
     name = "Infinite-Fuel",
@@ -7,7 +6,7 @@ data:extend(
     icon_size = 256,
     fuel_category = "IF",
     fuel_value = "1e309YJ",
-    fuel_acceleration_multiplier = 3.5,
+    fuel_acceleration_multiplier = 3,
     fuel_top_speed_multiplier = 4,
     subgroup = "intermediate-product",
     order = "q[InfitineFuel]-a",
@@ -65,5 +64,4 @@ data:extend(
     order = "q[InfitineFuel]-f",
     stack_size = 10
   },
-}
-)
+})

@@ -1,4 +1,42 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.7
+Date: 10/05/2021
+  Added:
+    - nothing value to if suel disabler
+    - bonus balancing setting (accelleration/max speed) (easy is the old one)
+    - recipe balancing setting (item needed/time needed) (easy is the old one)
+    - technology balancing setting (prerequisite/scienze pack) (easy is the old one)
+  Changes:
+    - internal code changes
+    - removed some weird stuff from the changelog
+    - hidden (plan to remove) KR fuel and recator Fuel
+    - removed "data-final-fixes-old"
+---------------------------------------------------------------------------------------------------
+Version: 2.0.6
+Date: 2021/03/06
+  Changes:
+    - same as 2.0.5 but for factorio 1.1
+---------------------------------------------------------------------------------------------------
+Version: 2.0.5
+Date: 06/03/2020
+  Changes:
+    - changed script to make Infinite Fuel available everywhere
+---------------------------------------------------------------------------------------------------
+Version: 2.0.4
+Date: 202/03/06
+  Changes:
+    - same as 2.0.3 but for factorio 1.1
+---------------------------------------------------------------------------------------------------
+Version: 2.0.3
+Date: 06/03/2020
+  Changes:
+    - changed script to make Infinite Fuel available everywhere
+---------------------------------------------------------------------------------------------------
+Version: 2.0.2
+Date: 05/12/2020
+  Changes:
+    - factorio 1.1 update
+---------------------------------------------------------------------------------------------------
 Version: 2.0.1
 Date: 16/10/2020
   Added:
