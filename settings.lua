@@ -17,15 +17,15 @@ data:extend({
         name = "IF-enable-on-nuclear-reactor",
         order = "ab",
         setting_type = "startup",
-        default_value = "true",
+        default_value = true,
     },
     {
         type = "bool-setting",
         name = "IF-kr-Infinite-Fuel",
-        hidden = "true",
+        hidden = true,
         order = "ac",
         setting_type = "startup",
-        default_value = "false",
+        default_value = false,
     },
     {
         type = "string-setting",

@@ -11,7 +11,7 @@ if settings.startup["IF-enable-on-nuclear-reactor"].value == true then
   table.insert(entity_list, "reactor")
 end
 
-if mods["Krastorio2"].value == true and settings.startup["IF-kr-Infinite-Fuel"].value == true then
+if mods["Krastorio2"] and settings.startup["IF-kr-Infinite-Fuel"].value == true then
   table.insert(entity_list, "generator-equipment")
   table.insert(entity_list, "spider-vehicle")
 end

@@ -1,6 +1,18 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.9
+Date: 24/10/2024
+  Changes:
+    - Updated for Factorio 2.0
+---------------------------------------------------------------------------------------------------
+Version: 2.0.8
+Date: 13/05/2021
+  Bugfixes:
+    - krastorio 2 unwanted depency
+    - changelog date 2.0.7 update  (not really a bug)
+    - technology research on normal mode
+---------------------------------------------------------------------------------------------------
 Version: 2.0.7
-Date: 10/05/2021
+Date: 12/05/2021
   Added:
     - nothing value to if suel disabler
     - bonus balancing setting (accelleration/max speed) (easy is the old one)

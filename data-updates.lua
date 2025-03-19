@@ -19,15 +19,13 @@ end
 --going to be removed end
 
 local IFFD = settings.startup["IF-fuel-disabler"].value
-local IFFD2 = {}
+local IFFD2 = 0
 if IFFD == "tier 1" then
   IFFD2 = 1
 elseif IFFD == "tier 2" then
   IFFD2 = 2
 elseif IFFD == "tier 3" then
   IFFD2 = 3
-else
-  IFFD2 = 0
 end
 
 if IFFD2 >= 1 then
@@ -48,23 +46,23 @@ end
 local recipebalancing = settings.startup["IF-fuel-recipebalancer"].value
 if recipebalancing == "easy" then
 elseif recipebalancing == "normal" then
-  data.raw["recipe"]["Infinite-Fuel"].ingredients = {{"nuclear-fuel", 10}}
-  data.raw["recipe"]["Boosted-Infinite-Fuel"].ingredients = {{"Infinite-Fuel", 10}}
-  data.raw["recipe"]["Ultra-Boosted-Infinite-Fuel"].ingredients = {{"Boosted-Infinite-Fuel", 10}}
+  data.raw["recipe"]["Infinite-Fuel"].ingredients = {{name = "nuclear-fuel", amount = 10, type = "item"}}
+  data.raw["recipe"]["Boosted-Infinite-Fuel"].ingredients = {{name = "Infinite-Fuel", amount = 10, type = "item"}}
+  data.raw["recipe"]["Ultra-Boosted-Infinite-Fuel"].ingredients = {{name = "Boosted-Infinite-Fuel", amount = 10, type = "item"}}
   data.raw["recipe"]["Infinite-Fuel"].energy_required = 750
   data.raw["recipe"]["Boosted-Infinite-Fuel"].energy_required = 1500
   data.raw["recipe"]["Ultra-Boosted-Infinite-Fuel"].energy_required = 3000
 elseif recipebalancing == "hard" then
-  data.raw["recipe"]["Infinite-Fuel"].ingredients = {{"nuclear-fuel", 20}, {"rocket-fuel", 10}}
-  data.raw["recipe"]["Boosted-Infinite-Fuel"].ingredients = {{"Infinite-Fuel", 20}, {"rocket-fuel", 10}}
-  data.raw["recipe"]["Ultra-Boosted-Infinite-Fuel"].ingredients = {{"Boosted-Infinite-Fuel", 20}, {"rocket-fuel", 10}}
+  data.raw["recipe"]["Infinite-Fuel"].ingredients = {{name = "nuclear-fuel", amount = 20, type = "item"}, {name = "rocket-fuel", amount = 10, type = "item"}}
+  data.raw["recipe"]["Boosted-Infinite-Fuel"].ingredients = {{name = "Infinite-Fuel", amount = 20, type = "item"}, {name = "rocket-fuel", amount = 10, type = "item"}}
+  data.raw["recipe"]["Ultra-Boosted-Infinite-Fuel"].ingredients = {{name = "Boosted-Infinite-Fuel", amount = 20, type = "item"}, {name = "rocket-fuel", amount = 10, type = "item"}}
   data.raw["recipe"]["Infinite-Fuel"].energy_required = 1250
   data.raw["recipe"]["Boosted-Infinite-Fuel"].energy_required = 2500
   data.raw["recipe"]["Ultra-Boosted-Infinite-Fuel"].energy_required = 5000
 elseif recipebalancing == "extreme" then
-  data.raw["recipe"]["Infinite-Fuel"].ingredients = {{"nuclear-fuel", 40}, {"rocket-fuel", 20}, {"low-density-structure", 5}, {"processing-unit", 5}}
-  data.raw["recipe"]["Boosted-Infinite-Fuel"].ingredients = {{"Infinite-Fuel", 40}, {"rocket-fuel", 20}, {"low-density-structure", 5}, {"processing-unit", 5}}
-  data.raw["recipe"]["Ultra-Boosted-Infinite-Fuel"].ingredients = {{"Boosted-Infinite-Fuel", 40}, {"rocket-fuel", 20}, {"low-density-structure", 5}, {"processing-unit", 5}}
+  data.raw["recipe"]["Infinite-Fuel"].ingredients = {{name = "nuclear-fuel", amount = 40, type = "item"}, {name = "rocket-fuel", amount = 20, type = "item"}, {name = "low-density-structure", amount = 5, type = "item"}, {name = "processing-unit", amount = 5, type = "item"}}
+  data.raw["recipe"]["Boosted-Infinite-Fuel"].ingredients = {{name = "Infinite-Fuel", amount = 40, type = "item"}, {name = "rocket-fuel", amount = 20, type = "item"}, {name = "low-density-structure", amount = 5, type = "item"}, {name = "processing-unit", amount = 5, type = "item"}}
+  data.raw["recipe"]["Ultra-Boosted-Infinite-Fuel"].ingredients = {{name = "Boosted-Infinite-Fuel", amount = 40, type = "item"}, {name = "rocket-fuel", amount = 20, type = "item"}, {name = "low-density-structure", amount = 5, type = "item"}, {name = "processing-unit", amount = 5, type = "item"}}
   data.raw["recipe"]["Infinite-Fuel"].energy_required = 2500
   data.raw["recipe"]["Boosted-Infinite-Fuel"].energy_required = 5000
   data.raw["recipe"]["Ultra-Boosted-Infinite-Fuel"].energy_required = 10000
