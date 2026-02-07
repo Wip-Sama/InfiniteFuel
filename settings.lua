@@ -27,6 +27,14 @@ data:extend({
         setting_type = "startup",
         default_value = false,
     },
+        {
+        type = "bool-setting",
+        name = "IF-lignumis-Infinite-Fuel",
+        hidden = true,
+        order = "ad",
+        setting_type = "startup",
+        default_value = false,
+    },
     {
         type = "string-setting",
         name = "IF-fuel-recipebalancer",
