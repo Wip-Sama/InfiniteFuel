@@ -1,0 +1,13 @@
+# Ignore version control and editor config
+.git
+.gitignore
+.gitattributes
+.vscode/
+
+# Ignore build and package artifacts
+.buildignore
+package_mod.py
+*.zip
+*.kra
+*.psd
+*.xlsx
