@@ -3,7 +3,7 @@ data:extend(
     {
     type = "technology",
     name = "Infinite-Power",
-    hidden = "true",
+    hidden = true,
     icon = "__InfiniteFuel__/graphics/infinite-fuel-tech.png",
     icon_size = 256,
     prerequisites = {"oil-processing", "kovarex-enrichment-process"},

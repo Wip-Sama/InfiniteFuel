@@ -1,20 +1,20 @@
 --going to be removed
 if mods["Krastorio2"] and settings.startup["IF-kr-Infinite-Fuel"].value == true then
-  data.raw.item["kr-Infinite-Fuel"].fuel_category = "vehicle-fuel"
+  data.raw.item["kr-Infinite-Fuel"].fuel_categories = {"vehicle-fuel"}
   --data.raw.recipe["kr-Infinite-Fuel"].hidden = false
   --table.insert(data.raw["technology"]["Infinite-Power"].effects, {type = "unlock-recipe",recipe = "kr-Infinite-Fuel"} )
 end
 if settings.startup["IF-kr-Infinite-Fuel"].value == false then
-  --data.raw.item["kr-Infinite-Fuel"].fuel_category = "nothing"
+  --data.raw.item["kr-Infinite-Fuel"].fuel_categories = {"nothing"}
 end
 
 if settings.startup["IF-enable-on-nuclear-reactor"].value == true then
-  data.raw.item["Reactor-Infinite-Fuel"].fuel_category = "nuclear"
+  data.raw.item["Reactor-Infinite-Fuel"].fuel_categories = {"nuclear"}
   --data.raw.recipe["Reactor-Infinite-Fuel"].hidden = false
   --table.insert(data.raw["technology"]["Infinite-Power"].effects, {type = "unlock-recipe",recipe = "Reactor-Infinite-Fuel"} )
 end
 if settings.startup["IF-enable-on-nuclear-reactor"].value == false then
-  --data.raw.item["Reactor-Infinite-Fuel"].fuel_category = "nothing"
+  --data.raw.item["Reactor-Infinite-Fuel"].fuel_categories = {"nothing"}
 end
 --going to be removed end
 
@@ -98,7 +98,7 @@ end
 local technologybalancing = settings.startup["IF-fuel-technologybalancer"].value
 if technologybalancing == "easy" then
   data.raw["technology"]["Infinite-Power"].prerequisites = {"oil-processing"}
-  data.raw["technology"]["Infinite-Power"].ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1}}
+  data.raw["technology"]["Infinite-Power"].unit.ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1}}
 elseif technologybalancing == "normal" then
 else
 end

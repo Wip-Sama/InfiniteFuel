@@ -1,25 +1,34 @@
-local function ChangeTable(entity, name)
-  if data.raw[entity][name] and data.raw[entity][name].burner then
-    if data.raw[entity][name].burner.fuel_categories then
-      table.insert(data.raw[entity][name].burner.fuel_categories, "IF")
-    end
-    if data.raw[entity][name].burner.fuel_category then
-      data.raw[entity][name].burner.fuel_categories = {data.raw[entity][name].burner.fuel_category}
-      table.insert(data.raw[entity][name].burner.fuel_categories, "IF")
-      data.raw[entity][name].burner.fuel_category = nil
-    end
+--- Adds the "IF" fuel category to a burner energy source without duplicating entries.
+local function add_if_fuel_category(source, require_burner_type)
+  if type(source) ~= "table" then
+    return
+  end
+  if require_burner_type and source.type ~= "burner" then
+    return
   end
 
-  if data.raw[entity][name] and data.raw[entity][name].energy_source then
-    if data.raw[entity][name].energy_source.fuel_categories then
-      table.insert(data.raw[entity][name].energy_source.fuel_categories, "IF")
-    end
-    if data.raw[entity][name].energy_source.fuel_category then
-      data.raw[entity][name].energy_source.fuel_categories = {data.raw[entity][name].energy_source.fuel_category}
-      table.insert(data.raw[entity][name].energy_source.fuel_categories, "IF")
-      data.raw[entity][name].energy_source.fuel_category = nil
+  if source.fuel_category then
+    source.fuel_categories = { source.fuel_category }
+    source.fuel_category = nil
+  elseif source.fuel_categories == nil then
+    -- Factorio defaults BurnerEnergySource::fuel_categories to {"chemical"} when omitted.
+    source.fuel_categories = { "chemical" }
+  end
+
+  for _, existing in pairs(source.fuel_categories) do
+    if existing == "IF" then
+      return
     end
   end
+  table.insert(source.fuel_categories, "IF")
+end
+
+local function enable_infinite_fuel_for_prototype(proto)
+  if type(proto) ~= "table" then
+    return
+  end
+  add_if_fuel_category(proto.burner, false)
+  add_if_fuel_category(proto.energy_source, true)
 end
 
 local entity_list = {
@@ -46,16 +55,14 @@ if mods["space-age"] then
 end
 
 if mods["lignumis"] and settings.startup["IF-lignumis-Infinite-Fuel"].value == true then
-  --ChangeTable("agricultural-tower", "burner-agricultural-tower")
-  --ChangeTable("assembling-machine", "lumber-mill")
+  --enable_infinite_fuel_for_prototype(data.raw["agricultural-tower"]["burner-agricultural-tower"])
+  --enable_infinite_fuel_for_prototype(data.raw["assembling-machine"]["lumber-mill"])
 end
 
-for _, entity in pairs(entity_list) do
-  if data.raw[entity] ~= nil then
-    for _, list in pairs(data.raw[entity]) do
-      for _, name in pairs(list) do
-        ChangeTable(entity, name)
-      end
+for _, entity_type in pairs(entity_list) do
+  if data.raw[entity_type] ~= nil then
+    for _, proto in pairs(data.raw[entity_type]) do
+      enable_infinite_fuel_for_prototype(proto)
     end
   end
 end

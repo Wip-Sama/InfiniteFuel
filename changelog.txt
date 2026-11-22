@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.0
+Date: 22/11/2026
+  Changes:
+    - Updated for Factorio 2.1.24+ (replaced ItemPrototype::fuel_category with fuel_categories)
+  Bugfixes:
+    - Fixed technology hidden flag type and easy technology balancer unit.ingredients target
+    - Fixed entity burner iteration in data-final-fixes to avoid duplicate fuel category insertion
+---------------------------------------------------------------------------------------------------
 Version: 2.0.10
 Date: 08/02/2026
   Added:
